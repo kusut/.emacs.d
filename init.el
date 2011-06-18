@@ -1,6 +1,7 @@
-(let ((default-dir "~/.emacs.d/vendor/"))
-  (add-to-list 'load-path default-dir)
-  (normal-top-level-add-subdirs-to-load-path))
+(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/vendor/")
+(add-to-list 'load-path "~/.emacs.d/vendor/auto-complete/")
+
 
 (setq backup-inhibited t)
 (setq auto-save-default nil)
@@ -8,10 +9,6 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/ac-dict")
 (ac-config-default)
-
-(require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
 
 
 (require 'uniquify)
@@ -35,7 +32,10 @@
       (list "pyflakes" (list local-file)))) 
   
   (add-to-list 'flymake-allowed-file-name-masks 
-	       '("\\.py\\'" flymake-pyflakes-init))) 
+	       '("\\.py\\'" flymake-pyflakes-init)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+(global-set-key [f5] 'flymake-goto-prev-error)
+(global-set-key [f6] 'flymake-goto-next-error)
 ;;; end code checking
