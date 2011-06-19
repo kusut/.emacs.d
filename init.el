@@ -17,6 +17,8 @@
 (setq-default truncate-lines t)
 (global-set-key [f12] 'toggle-truncate-lines)
 
+(require 'ido)
+(ido-mode t)
 
 (require 'autopair)
 (autopair-global-mode)
