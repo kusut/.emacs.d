@@ -5,6 +5,15 @@
 
 (setq backup-inhibited t)
 (setq auto-save-default nil)
+(global-font-lock-mode t)
+(setq inhibit-startup-screen t)
+
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+(setq default-tab-width 4)
+
 
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/ac-dict")
