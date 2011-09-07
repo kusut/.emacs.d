@@ -1,18 +1,12 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete/")
+(add-to-list 'load-path "~/.emacs.d/vendor/nxhtml/")
 
-
-(setq backup-inhibited t)
-(setq auto-save-default nil)
-(global-font-lock-mode t)
-(setq inhibit-startup-screen t)
-
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-
-(setq default-tab-width 4)
+(load "autostart")
+(load "defaults")
+(load "keys")
+(load "modes")
 
 (require 'boring)
 (boring)
@@ -21,12 +15,8 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/ac-dict")
 (ac-config-default)
 
-
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
-
-(setq-default truncate-lines t)
-(global-set-key [f12] 'toggle-truncate-lines)
 
 (require 'ido)
 (ido-mode t)
@@ -50,7 +40,4 @@
 	       '("\\.py\\'" flymake-pyflakes-init)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
-
-(global-set-key [f5] 'flymake-goto-prev-error)
-(global-set-key [f6] 'flymake-goto-next-error)
 ;;; end code checking

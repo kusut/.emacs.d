@@ -1,0 +1,8 @@
+(setq backup-inhibited t)
+(setq auto-save-default nil)
+(global-font-lock-mode t)
+(setq inhibit-startup-screen t)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq-default truncate-lines t)
