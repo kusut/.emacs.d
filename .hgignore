@@ -3,4 +3,7 @@ syntax: glob
 \#*#
 *~
 auto-save-list/
+nxhtml/
+session.*
 *.dat
+*.elc
