@@ -28,6 +28,8 @@
 (require 'twittering-mode)
 (setq twittering-use-master-password t)
 
+(setq jabber-account-list '(("kusut@jabber.org") ))
+
 ;;; code checking. requires pyflakes, pep8
 (require 'flymake-cursor)
 
