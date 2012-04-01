@@ -5,6 +5,7 @@
 
 (load "autostart")
 (load "defaults")
+(load "macros")
 (load "keys")
 (load "modes")
 

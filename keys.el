@@ -7,3 +7,5 @@
 ;require flymake setup
 (global-set-key [f5] 'flymake-goto-prev-error)
 (global-set-key [f6] 'flymake-goto-next-error)
+
+(global-set-key "\M-t" 'pdb-trace)
