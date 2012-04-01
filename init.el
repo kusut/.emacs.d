@@ -25,6 +25,9 @@
 (require 'autopair)
 (autopair-global-mode)
 
+(require 'twittering-mode)
+(setq twittering-use-master-password t)
+
 ;;; code checking. requires pyflakes, pep8
 (require 'flymake-cursor)
 
