@@ -9,8 +9,8 @@
 (load "keys")
 (load "modes")
 
-(require 'boring)
-(boring)
+;(require 'boring)
+;(boring)
 
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/ac-dict")
