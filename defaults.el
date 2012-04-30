@@ -1,3 +1,4 @@
+(show-paren-mode t)
 (setq backup-inhibited t)
 (setq auto-save-default nil)
 (global-font-lock-mode t)
