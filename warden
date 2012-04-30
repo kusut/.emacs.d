@@ -1,4 +1,3 @@
 #!/bin/bash
-/usr/local/bin/pyflakes "$1"
-/usr/local/bin/pep8 --repeat "$1"
+/usr/local/bin/flake8 "$1"
 true
