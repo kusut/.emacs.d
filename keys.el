@@ -10,4 +10,4 @@
 
 (global-set-key "\M-t" 'pdb-trace)
 (global-set-key "\C-w" 'kill-region-or-backward-kill-word)
-(global-set-key "\C-x i") 'magit-status)
+(global-set-key "\C-x i" 'magit-status)
