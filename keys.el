@@ -8,6 +8,7 @@
 (global-set-key [f5] 'flymake-goto-prev-error)
 (global-set-key [f6] 'flymake-goto-next-error)
 
-(global-set-key "\M-t" 'pdb-trace)
-(global-set-key "\C-w" 'kill-region-or-backward-kill-word)
-(global-set-key "\C-x i" 'magit-status)
+(global-set-key (kbd "M-t") 'pdb-trace)
+(global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
+(global-set-key (kbd "C-c i") 'magit-status)
+(global-set-key (kbd "C-c C-i") 'magit-status)
