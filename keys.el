@@ -9,5 +9,5 @@
 (global-set-key [f6] 'flymake-goto-next-error)
 
 (global-set-key "\M-t" 'pdb-trace)
-(global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
-(global-set-key (kbd "C-i") 'magit-status)
+(global-set-key "\C-w" 'kill-region-or-backward-kill-word)
+(global-set-key "\C-x i") 'magit-status)
