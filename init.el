@@ -16,7 +16,6 @@
 (load-theme 'zenburn t)
 
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/ac-dict")
 (ac-config-default)
 
 (require 'uniquify)
@@ -24,9 +23,6 @@
 
 (require 'ido)
 (ido-mode t)
-
-(require 'autopair)
-(autopair-global-mode)
 
 (require 'twittering-mode)
 (setq twittering-use-master-password t)
