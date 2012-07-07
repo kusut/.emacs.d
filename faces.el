@@ -1,0 +1,5 @@
+(load-theme 'zenburn t)
+(set-face-background 'flymake-errline "#8c5353")
+(set-face-background 'flymake-warnline "#4f4f4f")
+(set-face-background 'mumamo-background-chunk-major "#3f3f3f")
+(set-face-background 'mumamo-background-chunk-submode1 "#4f4f4f")

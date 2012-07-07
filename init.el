@@ -13,7 +13,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(load-theme 'zenburn t)
+(load "faces")
 
 (require 'auto-complete-config)
 (ac-config-default)
