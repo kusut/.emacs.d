@@ -1,5 +1,4 @@
 (load-theme 'zenburn t)
-(set-face-background 'flymake-errline "#8c5353")
-(set-face-background 'flymake-warnline "#4f4f4f")
-(set-face-background 'mumamo-background-chunk-major "#3f3f3f")
-(set-face-background 'mumamo-background-chunk-submode1 "#4f4f4f")
+(custom-set-faces
+ '(flymake-warnline ((((class color )) (:background "#4f4f4f" :weight normal :underline nil))))
+ '(flymake-errline ((((class color )) (:background "#8c5353" :weight normal :underline nil)))))
