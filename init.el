@@ -1,7 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/vendor/")
-(add-to-list 'load-path "~/.emacs.d/vendor/auto-complete/")
-(add-to-list 'load-path "~/.emacs.d/vendor/nxhtml/")
+(add-to-list 'load-path "~/.emacs.d/nxhtml/")
 
 (load "autostart")
 (load "defaults")
@@ -22,7 +20,9 @@
 (setq uniquify-buffer-name-style 'forward)
 
 (require 'ido)
+(require 'ido-ubiquitous)
 (ido-mode t)
+(ido-ubiquitous-mode t)
 
 (setq jabber-account-list '(("kusut@jabber.org") ))
 
