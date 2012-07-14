@@ -7,3 +7,14 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (setq-default truncate-lines t)
+
+(setq jabber-account-list '(("kusut@jabber.org")))
+
+(add-to-list 'auto-mode-alist '("\\.jinja2*$" . jinja2-mode))
+(add-to-list 'auto-mode-alist '("\\.mako*$" . mako-html-mumamo-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+
+(load-theme 'zenburn t)
+(custom-set-faces
+ '(flymake-warnline ((((class color )) (:background "#4f4f4f" :weight normal :underline nil))))
+ '(flymake-errline ((((class color )) (:background "#8c5353" :weight normal :underline nil)))))
