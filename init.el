@@ -1,5 +1,4 @@
 (add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/nxhtml/")
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -15,7 +14,6 @@
 (require 'ido-ubiquitous)
 (ido-mode t)
 (ido-ubiquitous-mode t)
-
 
 (require 'flymake-cursor)
 
@@ -33,8 +31,6 @@
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 
-
-(load "autostart")
 (load "defaults")
 (load "macros")
 (load "keys")
