@@ -17,4 +17,5 @@
 (global-set-key [f6] 'flymake-goto-next-error)
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c C-g") 'magit-status)
+(global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
 (global-set-key (kbd "M-t") 'pdb-trace)

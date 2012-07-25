@@ -8,6 +8,7 @@
 (scroll-bar-mode -1)
 (setq-default truncate-lines t)
 (setq-default indent-tabs-mode nil)
+(add-to-list 'default-frame-alist '(font . "Monospace-10"))
 
 (setq jabber-account-list '(("kusut@jabber.org")))
 
