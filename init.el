@@ -16,20 +16,9 @@
 (ido-ubiquitous-mode t)
 
 (require 'flymake-cursor)
-
-(when (load "flymake" t) 
-  (defun flymake-init () 
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy 
-		       'flymake-create-temp-inplace)) 
-	   (local-file (file-relative-name 
-			temp-file 
-			(file-name-directory buffer-file-name)))) 
-      (list "~/.emacs.d/warden.py" (list local-file)))) 
-  
-  (add-to-list 'flymake-allowed-file-name-masks 
-	       '("\\.py\\'" flymake-init)))
-
-(add-hook 'find-file-hook 'flymake-find-file-hook)
+(require 'flymake-python-pyflakes)
+(setq flymake-python-pyflakes-executable "~/.emacs.d/warden.py")
+(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 
 (load "defaults")
 (load "macros")
