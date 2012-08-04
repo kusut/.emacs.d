@@ -31,8 +31,23 @@
 
 (get-packages)
 
+(when (package-installed-p 'auto-complete)
+  (require 'auto-complete-config)
+  (ac-config-default))
+
+(when (package-installed-p 'flymake-cursor)
+  (require 'flymake-cursor))  
+
+(when (package-installed-p 'flymake-python-pyflakes)
+  (require 'flymake-python-pyflakes)
+  (setq flymake-python-pyflakes-executable "~/.emacs.d/warden.py")
+  (add-hook 'python-mode-hook 'flymake-python-pyflakes-load))
+
+(when (package-installed-p 'ido-ubiquitous)
+  (require 'ido-ubiquitous)
+  (ido-ubiquitous-mode t))
+
 (when (package-installed-p 'markdown-mode)
-  (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
   (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
 
 (when (package-installed-p 'zenburn-theme)
@@ -41,17 +56,4 @@
    '(flymake-warnline ((((class color )) (:background "#4f4f4f" :weight normal :underline nil))))
    '(flymake-errline ((((class color )) (:background "#8c5353" :weight normal :underline nil))))))
 
-(show-paren-mode t)
-(setq backup-inhibited t)
-(setq auto-save-default nil)
-(global-font-lock-mode t)
-(setq inhibit-startup-screen t)
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(setq-default truncate-lines t)
-(setq-default indent-tabs-mode nil)
-(add-to-list 'default-frame-alist '(font . "Monospace-10"))
-(setq jabber-account-list '(("kusut@jabber.org")))
-
-(provide 'defaults)
+(provide 'melpa)

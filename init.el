@@ -1,20 +1,23 @@
 (add-to-list 'load-path "~/.emacs.d/")
 
-(require 'defaults)
+(require 'melpa)
 (require 'keys)
-
-(require 'auto-complete-config)
-(ac-config-default)
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
 (require 'ido)
-(require 'ido-ubiquitous)
 (ido-mode t)
-(ido-ubiquitous-mode t)
 
-(require 'flymake-cursor)
-(require 'flymake-python-pyflakes)
-(setq flymake-python-pyflakes-executable "~/.emacs.d/warden.py")
-(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+(show-paren-mode t)
+(setq backup-inhibited t)
+(setq auto-save-default nil)
+(global-font-lock-mode t)
+(setq inhibit-startup-screen t)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq-default truncate-lines t)
+(setq-default indent-tabs-mode nil)
+(add-to-list 'default-frame-alist '(font . "Monospace-10"))
+(setq jabber-account-list '(("kusut@jabber.org")))
