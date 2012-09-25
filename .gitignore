@@ -2,6 +2,8 @@
 *~
 auto-save-list/
 nxhtml/
+emacs-jabber*/
+mmm-mako.el
 session.*
 elpa/
 *.dat

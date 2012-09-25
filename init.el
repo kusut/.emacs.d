@@ -1,13 +1,11 @@
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/emacs-jabber")
 
-(require 'melpa)
-(require 'keys)
-
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
-
+(require 'jabber-autoloads)
 (require 'ido)
 (ido-mode t)
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
 
 (show-paren-mode t)
 (setq backup-inhibited t)
@@ -19,5 +17,15 @@
 (scroll-bar-mode -1)
 (setq-default truncate-lines t)
 (setq-default indent-tabs-mode nil)
-(add-to-list 'default-frame-alist '(font . "Monospace-10"))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
 (setq jabber-account-list '(("kusut@jabber.org")))
+
+(require 'melpa)
+(require 'keys)
+
+(when (package-installed-p 'mmm-mode)
+  (require 'mmm-auto)
+  (setq mmm-global-mode 'maybe)
+  (load "~/.emacs.d/mmm-mako.el")
+  (add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
+  (mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako))
