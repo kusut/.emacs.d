@@ -22,10 +22,3 @@
 
 (require 'melpa)
 (require 'keys)
-
-(when (package-installed-p 'mmm-mode)
-  (require 'mmm-auto)
-  (setq mmm-global-mode 'maybe)
-  (load "~/.emacs.d/mmm-mako.el")
-  (add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
-  (mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako))

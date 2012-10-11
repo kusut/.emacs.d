@@ -7,13 +7,16 @@
 (defvar packages 
   '(
     auto-complete
+    expand-region
     flymake-cursor
     flymake-python-pyflakes
     ido-ubiquitous
     jinja2-mode
     magit
     markdown-mode
+    mmm-mode
     nginx-mode
+    wrap-region
     zenburn-theme
 ))
 
@@ -49,6 +52,13 @@
 
 (when (package-installed-p 'markdown-mode)
   (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
+
+(when (package-installed-p 'mmm-mode)
+  (require 'mmm-auto)
+  (setq mmm-global-mode 'maybe)
+  (load "~/.emacs.d/mmm-mako.el")
+  (add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
+  (mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako))
 
 (when (package-installed-p 'zenburn-theme)
   (load-theme 'zenburn t)
