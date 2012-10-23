@@ -14,8 +14,9 @@
     jinja2-mode
     magit
     markdown-mode
-    mmm-mode
+    mmm-mako
     nginx-mode
+    python
     wrap-region
     zenburn-theme
 ))
@@ -53,10 +54,10 @@
 (when (package-installed-p 'markdown-mode)
   (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
 
-(when (package-installed-p 'mmm-mode)
+(when (package-installed-p 'mmm-mako)
   (require 'mmm-auto)
+  (require 'mmm-mako)
   (setq mmm-global-mode 'maybe)
-  (load "~/.emacs.d/mmm-mako.el")
   (add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
   (mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako))
 
