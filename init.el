@@ -7,6 +7,7 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+(setq frame-title-format "emacs")
 (show-paren-mode t)
 (setq backup-inhibited t)
 (setq auto-save-default nil)
