@@ -35,7 +35,4 @@
 (global-set-key (kbd "M-w") 'copy-region-or-copy-line)
 (global-set-key (kbd "M-t") 'pdb-trace)
 
-(global-set-key (kbd "C-=") 'er/expand-region)
-(global-set-key (kbd "C-\\") 'wrap-region-mode)
-
 (provide 'keys)
