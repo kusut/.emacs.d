@@ -1,10 +1,5 @@
 (require 'cl)
-
-(condition-case nil
-    (require 'package)
-  ('error
-    (url-copy-file "http://bit.ly/pkg-el23" "./.emacs.d/package.el" t)
-    (require 'package)))
+(require 'package)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
@@ -20,7 +15,6 @@
     markdown-mode
     mmm-mako
     nginx-mode
-    python
     zenburn-theme
 ))
 
@@ -65,12 +59,6 @@
   (mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako))
 
 (when (package-installed-p 'zenburn-theme)
-  (if (< emacs-major-version 24)
-      (load-theme 'zenburn)
-    (load-theme 'zenburn t))
-
-  (custom-set-faces
-   '(flymake-warnline ((((class color )) (:background "#4f4f4f" :weight normal :underline nil))))
-   '(flymake-errline ((((class color )) (:background "#8c5353" :weight normal :underline nil))))))
+  (load-theme 'zenburn))
 
 (provide 'melpa)
