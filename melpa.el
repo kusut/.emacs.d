@@ -7,8 +7,7 @@
 
 (defvar packages 
   '(
-    flymake-cursor
-    flymake-python-pyflakes
+    flycheck
     ido-ubiquitous
     jinja2-mode
     magit
@@ -36,14 +35,6 @@
   (require 'auto-complete-config)
   (ac-config-default))
 
-(when (package-installed-p 'flymake-cursor)
-  (require 'flymake-cursor))  
-
-(when (package-installed-p 'flymake-python-pyflakes)
-  (require 'flymake-python-pyflakes)
-  (setq flymake-python-pyflakes-executable "~/.emacs.d/warden.py")
-  (add-hook 'python-mode-hook 'flymake-python-pyflakes-load))
-
 (when (package-installed-p 'ido-ubiquitous)
   (require 'ido-ubiquitous)
   (ido-ubiquitous-mode t))
@@ -57,6 +48,9 @@
   (setq mmm-global-mode 'maybe)
   (add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
   (mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako))
+
+(when (package-installed-p 'flycheck)
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (when (package-installed-p 'zenburn-theme)
   (load-theme 'zenburn))
