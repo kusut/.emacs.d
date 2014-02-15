@@ -8,12 +8,17 @@
 (defvar packages 
   '(
     flycheck
+    flycheck-haskell
+    ghc
+    ghci-completion
+    haskell-mode
     ido-ubiquitous
     jinja2-mode
     magit
     markdown-mode
     mmm-mako
     nginx-mode
+    shm
     zenburn-theme
 ))
 
@@ -49,10 +54,20 @@
   (add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
   (mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako))
 
-(when (package-installed-p 'flycheck)
-  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (when (package-installed-p 'zenburn-theme)
-  (load-theme 'zenburn))
+  (load-theme 'zenburn t))
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+(add-hook 'haskell-mode-hook 'structured-haskell-mode)
+;(define-key haskell-mode-map (kbd "C-x C-s") 'haskell-mode-save-buffer)
+
+(autoload 'ghc-init "ghc" nil t)
+(add-hook 'haskell-mode-hook
+          (lambda ()
+            (ghc-init)))
+(add-to-list 'exec-path "~/.cabal/bin")
+(setq haskell-stylish-on-save t)
 
 (provide 'melpa)
