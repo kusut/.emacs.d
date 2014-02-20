@@ -14,6 +14,7 @@
     haskell-mode
     ido-ubiquitous
     jinja2-mode
+    js2-mode
     magit
     markdown-mode
     mmm-mako
@@ -69,5 +70,5 @@
             (ghc-init)))
 (add-to-list 'exec-path "~/.cabal/bin")
 (setq haskell-stylish-on-save t)
-
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (provide 'melpa)
