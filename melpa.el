@@ -14,6 +14,7 @@
     magit
     markdown-mode
     nginx-mode
+    purescript-mode
     zenburn-theme
 ))
 
@@ -37,6 +38,11 @@
 
 (when (package-installed-p 'markdown-mode)
   (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
+
+(when (package-installed-p 'purescript-mode)
+  (require 'purescript-mode)
+  (add-to-list 'auto-mode-alist '("\\.purs$" . purescript-mode))
+  (add-hook 'purescript-mode-hook 'turn-on-purescript-indentation))
 
 (when (package-installed-p 'zenburn-theme)
   (load-theme 'zenburn t))
