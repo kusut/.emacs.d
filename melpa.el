@@ -1,3 +1,7 @@
+;;; melpa.el --- Packaging related module
+;;; Commentary:
+;;; Code:
+
 (require 'cl)
 (require 'package)
 
@@ -8,8 +12,8 @@
 (defvar packages 
   '(
     flycheck
+    haskell-mode
     ido-ubiquitous
-    jinja2-mode
     js2-mode
     magit
     markdown-mode
