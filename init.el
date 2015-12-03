@@ -1,3 +1,7 @@
+;;; init.el --- This is where the magic begins
+;;; Commentary:
+;;; Code:
+
 (add-to-list 'load-path "~/.emacs.d/")
 
 (require 'ido)
