@@ -13,7 +13,7 @@
   '(
     flycheck
     haskell-mode
-    ido-ubiquitous
+    ido-completing-read+
     js2-mode
     magit
     markdown-mode
