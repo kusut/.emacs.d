@@ -12,6 +12,7 @@
 (defvar packages 
   '(
     flycheck
+    groovy-mode
     haskell-mode
     ido-completing-read+
     js2-mode
