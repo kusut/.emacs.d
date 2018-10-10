@@ -55,4 +55,6 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(setq js-indent-level 2)
+(setq groovy-indent-offset 2)
 (provide 'melpa)
