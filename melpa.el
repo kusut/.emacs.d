@@ -13,10 +13,12 @@
 ;; repo
 (setq package-archives
       '(("MELPA Stable" . "https://stable.melpa.org/packages/")
-        ("MELPA"        . "https://melpa.org/packages/"))
+        ("MELPA"        . "https://melpa.org/packages/")
+        ("GNU"          . "http://elpa.gnu.org/packages/"))
       package-archive-priorities
       '(("MELPA Stable" . 1)
-        ("MELPA"        . 4)))
+        ("MELPA"        . 4)
+        ("GNU"          . 8)))
 
 ;; setup
 (package-initialize)
