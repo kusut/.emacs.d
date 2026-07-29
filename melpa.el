@@ -28,7 +28,7 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 (setq use-package-verbose t)
-
+(setq package-install-upgrade-built-in t)
 
 ;; packages
 (use-package flycheck
