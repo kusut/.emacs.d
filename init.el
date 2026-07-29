@@ -1,7 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/emacs-jabber")
 
-(require 'jabber-autoloads)
 (require 'ido)
 (ido-mode t)
 (require 'uniquify)
@@ -19,7 +17,6 @@
 (setq-default truncate-lines t)
 (setq-default indent-tabs-mode nil)
 (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
-(setq jabber-account-list '(("kusut@jabber.org")))
 
 (require 'melpa)
 (require 'keys)

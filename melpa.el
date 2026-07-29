@@ -12,8 +12,6 @@
 
 (defvar packages 
   '(
-    auto-complete
-    expand-region
     flymake-cursor
     flymake-python-pyflakes
     ido-ubiquitous
@@ -23,7 +21,6 @@
     mmm-mako
     nginx-mode
     python
-    wrap-region
     zenburn-theme
 ))
 
