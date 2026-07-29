@@ -48,7 +48,11 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
 (use-package nginx-mode)
-(use-package zenburn-theme :ensure t)
+(use-package zenburn-theme
+  :ensure t
+  :demand t
+  :config
+  (load-theme 'zenburn t))
 
 (provide 'melpa)
 ;;; melpa.el ends here
